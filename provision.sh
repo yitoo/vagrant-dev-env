@@ -4,7 +4,7 @@
 # https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
 
 sudo apt-get update
-sudo apt-get install -y nginx php-fpm php-mysql mysql-server php7.0-intl php7.0-xml php7.0-json
+sudo apt-get install -y nginx php-fpm php-mysql mysql-server php7.0-intl php7.0-xml php7.0-json php7.0-zip
 
 #configure php
 sudo sed -i 's#;date.timezone =#date.timezone = "Europe/Paris"#' /etc/php/7.0/fpm/php.ini
