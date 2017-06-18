@@ -1,4 +1,4 @@
-Yitoo dev en 
+Yitoo dev env
 =================
 
 Requirements
@@ -7,6 +7,7 @@ Requirements
 - ubuntu/xenial64
 - php7
 - nginx
+- mysql 5.7
 
 How to install ?
 --------------
