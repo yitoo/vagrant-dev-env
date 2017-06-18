@@ -1,11 +1,11 @@
-Africdre Projects
+Yitoo dev en 
 =================
 
-Tools
+Requirements
 ----
 - vagrant + shell + virtualbox
-- ubuntu 14.4
-- php7.1
+- ubuntu/xenial64
+- php7
 - nginx
 
 How to install ?
@@ -13,18 +13,7 @@ How to install ?
 In the host machine, ensure vagrant and virtualbox are installed
 
 ```shell
-$ git clone git@github.com:abarry/africadre.git
-$ cd africadre
+$ git@github.com:yitoo/vagrant-dev-env.git yitoo-vagrant-dev-env
+$ cd yitoo-vagrant-dev-env
 $ vagrant up --provision
 ```
-
-Edit your hosts and add the following line
-
-```shell
-$ sudo vim /etc/hosts
-10.10.10.10     dev.africadre.com dev.jobs.africadre.com
-```
-
-That's it !
-
-
