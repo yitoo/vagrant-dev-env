@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
-# https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
+sudo apt-get install apt-transport-https
+sudo add-apt-repository ppa:webupd8team/java
+echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
 
 sudo apt-get update
-sudo apt-get install -y nginx php-fpm php-mysql mysql-server php7.0-intl php7.0-xml php7.0-json php7.0-zip
+sudo apt-get install -y nginx php-fpm php-mysql mysql-server php7.0-intl php7.0-xml php7.0-json php7.0-zip php7.0-curl oracle-java8-installer elasticsearch
+
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable elasticsearch.service
 
 #configure php
 sudo sed -i 's#;date.timezone =#date.timezone = "Europe/Paris"#' /etc/php/7.0/fpm/php.ini
